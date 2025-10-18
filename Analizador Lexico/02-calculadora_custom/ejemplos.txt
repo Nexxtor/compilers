@@ -1,0 +1,40 @@
+# Ejemplos para el Analizador Lexicográfico en C Puro
+
+# Asignaciones simples
+x = 10
+y = 20.5
+z = 0
+
+# Operaciones aritméticas básicas
+suma = a + b
+resta = x - y
+multiplicacion = 5 * 3
+division = 10 / 2
+
+# Expresiones con paréntesis
+resultado1 = (x + y) * z
+resultado2 = a * (b + c)
+resultado3 = (a + b) / (c - d)
+
+# Expresiones complejas
+formula = ((x + y) * z - w) / (a + b)
+calculo = 3.14159 * radio * radio
+area = base * altura / 2
+
+# Variables con nombres largos
+variable_muy_larga = 123.456
+otro_identificador = valor_inicial
+resultado_final = operacion_compleja
+
+# Múltiples operaciones en una línea
+x = y = z = 42
+
+# Números decimales
+pi = 3.14159
+e = 2.71828
+golden_ratio = 1.618
+
+# Expresiones anidadas
+compleja = (((a + b) * c) - ((d / e) + f))
+
+# Fin de ejemplos

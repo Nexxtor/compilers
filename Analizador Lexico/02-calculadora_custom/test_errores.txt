@@ -1,0 +1,10 @@
+x = 42
+y @ 3.14
+resultado = x + y # comentario inválido
+expresion & operador_invalido
+calculo = a + b $ error
+numero = 123.45.67
+variable! = valor
+operacion % resto
+{llave_invalida} = 100
+[corchete] = error

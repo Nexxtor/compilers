@@ -1,0 +1,12 @@
+# Ejecutable del proyecto
+calculadora
+
+# Archivos de depuración
+calculadora.dSYM/
+
+# Archivos objeto
+*.o
+
+# Archivos temporales
+*.tmp
+*.bak

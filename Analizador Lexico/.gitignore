@@ -1,0 +1,18 @@
+# Archivos ejecutables específicos del analizador léxico
+calculadora
+analizador_lexico
+lexer
+
+# Archivos generados por Flex
+lex.yy.c
+lex.yy.h
+
+# Archivos de depuración
+*.dSYM/
+
+# Archivos objeto
+*.o
+
+# Archivos temporales de prueba
+test_output_*.txt
+salida_*.txt

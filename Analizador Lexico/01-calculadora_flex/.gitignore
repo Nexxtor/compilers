@@ -1,0 +1,12 @@
+# Ejecutable del proyecto
+calculadora
+
+# Archivos generados por Flex
+lex.yy.c
+
+# Archivos de depuración
+calculadora.dSYM/
+
+# Archivos temporales
+*.tmp
+*.bak

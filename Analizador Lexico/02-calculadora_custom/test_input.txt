@@ -1,0 +1,10 @@
+x = 42
+y = 3.14159
+resultado = x + y * 2
+expresion = (10 - 5) / 2
+calculo = a + b - c * d
+numerogrande = 999.999
+variablelarga = valor1 + valor2
+operacion = 1 + 2 + 3 + 4 + 5
+parentesis = ((a + b) * (c - d))
+asignacionmultiple = x = y = z = 100
