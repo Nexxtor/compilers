@@ -1,0 +1,24 @@
+# Archivos ejecutables
+parser
+calculadora
+
+# Archivos generados por Flex/Bison
+lex.yy.c
+parser.tab.c
+parser.tab.h
+*.output
+
+# Archivos objeto
+*.o
+
+# Archivos de debug
+*.dSYM/
+
+# Archivos temporales
+*.tmp
+*.bak
+*~
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,71 @@
+📚 EJEMPLOS DE USO - Parser LL(1) con Lex/Yacc
+=============================================
+
+🎯 GRAMÁTICA IMPLEMENTADA:
+E  -> T E'
+E' -> + T E' | ε
+T  -> F T'
+T' -> * F T' | ε
+F  -> ( E ) | ident
+
+📝 EJEMPLOS VÁLIDOS:
+
+1. Identificador simple:
+   Entrada: a
+   Árbol: F: a
+
+2. Suma simple:
+   Entrada: a + b
+   Árbol: E: +
+          ├── F: a
+          └── F: b
+
+3. Multiplicación simple:
+   Entrada: a * b
+   Árbol: T: *
+          ├── F: a
+          └── F: b
+
+4. Expresión con paréntesis:
+   Entrada: ( a + b )
+   Árbol: F: ()
+          └── E: +
+              ├── F: a
+              └── F: b
+
+5. Precedencia de operadores:
+   Entrada: a + b * c
+   Árbol: E: +
+          ├── F: a
+          └── T: *
+              ├── F: b
+              └── F: c
+
+6. Expresión compleja:
+   Entrada: ( a + b ) * c
+   Árbol: T: *
+          ├── F: ()
+          │   └── E: +
+          │       ├── F: a
+          │       └── F: b
+          └── F: c
+
+🚀 CÓMO EJECUTAR:
+
+1. Compilar:
+   make all
+
+2. Ejecutar interactivamente:
+   make run
+
+3. Ejecutar pruebas:
+   make test
+
+4. Probar casos de error:
+   make test-errors
+
+💡 NOTAS:
+- Los identificadores pueden contener letras, números y guiones bajos
+- Deben comenzar con una letra
+- Los espacios son ignorados
+- Use Ctrl+D para terminar la entrada en modo interactivo

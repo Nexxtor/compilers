@@ -4,7 +4,7 @@
 calculadora
 analizador
 lexer
-parser
+# parser - comentado para permitir la carpeta Parser/
 
 # Archivos de depuración
 *.dSYM/

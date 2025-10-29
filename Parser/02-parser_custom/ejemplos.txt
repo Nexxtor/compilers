@@ -1,0 +1,107 @@
+📚 EJEMPLOS DE USO - Parser LL(1) Personalizado en C
+===================================================
+
+🎯 GRAMÁTICA IMPLEMENTADA:
+E  -> T E'
+E' -> + T E' | ε
+T  -> F T'
+T' -> * F T' | ε
+F  -> ( E ) | ident
+
+📝 EJEMPLOS VÁLIDOS:
+
+1. Identificador simple:
+   Entrada: a
+   Árbol: ID: a
+
+2. Suma simple:
+   Entrada: a + b
+   Árbol: +
+          ├── ID: a
+          └── ID: b
+
+3. Multiplicación simple:
+   Entrada: a * b
+   Árbol: *
+          ├── ID: a
+          └── ID: b
+
+4. Expresión con paréntesis:
+   Entrada: ( a + b )
+   Árbol: ()
+          └── +
+              ├── ID: a
+              └── ID: b
+
+5. Precedencia de operadores:
+   Entrada: a + b * c
+   Árbol: +
+          ├── ID: a
+          └── *
+              ├── ID: b
+              └── ID: c
+
+6. Expresión compleja:
+   Entrada: ( a + b ) * c
+   Árbol: *
+          ├── ()
+          │   └── +
+          │       ├── ID: a
+          │       └── ID: b
+          └── ID: c
+
+🚀 MODOS DE EJECUCIÓN:
+
+1. Modo interactivo:
+   ./parser
+   >>> a + b * c
+   >>> (a + b) * c
+   >>> salir
+
+2. Procesar archivo:
+   ./parser test_input.txt
+
+3. Expresión directa:
+   ./parser -e "a + b * c"
+
+🔧 COMANDOS DE COMPILACIÓN:
+
+1. Compilar:
+   make all
+
+2. Ejecutar pruebas:
+   make test
+   make test-errors
+   make test-all
+
+3. Modo debug:
+   make debug
+
+💡 CARACTERÍSTICAS:
+
+✅ Analizador léxico manual completo
+✅ Parser LL(1) recursivo descendente
+✅ Construcción de árbol sintáctico
+✅ Manejo detallado de errores
+✅ Múltiples modos de ejecución
+✅ Gestión automática de memoria
+✅ Seguimiento de línea y columna
+✅ Mensajes de error informativos
+
+🎯 TOKENS RECONOCIDOS:
+
+- IDENTIFICADOR: [a-zA-Z][a-zA-Z0-9_]*
+- SUMA: +
+- MULTIPLICACION: *
+- PAREN_IZQ: (
+- PAREN_DER: )
+- EOF: Fin de entrada
+- ERROR: Token no reconocido
+
+📊 PRECEDENCIA DE OPERADORES:
+
+1. ( ) - Paréntesis (máxima precedencia)
+2. *   - Multiplicación
+3. +   - Suma (mínima precedencia)
+
+Todos los operadores son asociativos por la izquierda.

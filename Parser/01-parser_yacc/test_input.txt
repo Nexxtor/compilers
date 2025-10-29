@@ -1,0 +1,46 @@
+# Casos de prueba válidos para el Parser LL(1)
+# Gramática: E -> T E' | E' -> + T E' | ε | T -> F T' | T' -> * F T' | ε | F -> ( E ) | ident
+
+# Casos básicos - Identificadores simples
+a
+variable
+x1
+nombre_largo
+
+# Casos de suma
+a + b
+x + y + z
+variable1 + variable2
+
+# Casos de multiplicación
+a * b
+x * y * z
+var1 * var2
+
+# Casos con paréntesis
+( a )
+( x + y )
+( a * b )
+
+# Casos mixtos - precedencia
+a + b * c
+a * b + c
+( a + b ) * c
+a * ( b + c )
+
+# Casos complejos
+( a + b ) * ( c + d )
+a + b * c + d
+( a * b + c ) * d
+a * ( b + c * d )
+
+# Casos con múltiples operadores
+a + b + c + d
+a * b * c * d
+( a + b ) * ( c + d ) + e
+
+# Casos anidados
+( ( a ) )
+( ( a + b ) )
+( a + ( b * c ) )
+( ( a + b ) * ( c + d ) )

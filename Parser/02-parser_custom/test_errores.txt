@@ -1,0 +1,52 @@
+# Casos de prueba con errores para el Parser LL(1) Personalizado
+# Estos casos deben generar errores sintácticos o léxicos
+
+# Errores léxicos - caracteres no válidos
+a @ b
+x # y
+variable$
+123abc
+
+# Errores sintácticos - operadores sin operandos
++
+*
++ a
+* b
+a +
+b *
+
+# Errores de paréntesis
+( a
+a )
+( ( a )
+( a ) )
+) a (
+
+# Errores de secuencia
+a + + b
+a * * b
+a b
++ + a
+* * b
+
+# Errores mixtos
+( a + )
+( * a )
+a + ( )
+( ) + a
+
+# Errores de precedencia mal formados
+a + * b
+a * + b
+( + a )
+( a * )
+
+# Expresiones vacías o incompletas
+( )
+a + ( + b )
+a * ( * b )
+
+# Múltiples errores
+a + + * b
+( ( a + )
+) a + b (

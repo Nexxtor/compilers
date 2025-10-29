@@ -1,0 +1,12 @@
+# Ejecutable del parser
+parser
+
+# Archivos objeto
+*.o
+
+# Archivos de debug
+parser.dSYM/
+
+# Archivos temporales
+*.tmp
+*.bak

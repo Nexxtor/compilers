@@ -1,0 +1,20 @@
+# Ejecutable del parser
+parser
+
+# Archivos generados por Flex
+lex.yy.c
+
+# Archivos generados por Bison
+parser.tab.c
+parser.tab.h
+parser.output
+
+# Archivos objeto
+*.o
+
+# Archivos de debug
+parser.dSYM/
+
+# Archivos temporales
+*.tmp
+*.bak
